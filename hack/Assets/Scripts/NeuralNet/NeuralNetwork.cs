@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class NeuralNetwork : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Layer[] layers;
     void Start()
     {
-        
+        layers = new Layer[2];
     }
 
     // Update is called once per frame
