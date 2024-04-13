@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NeuralNetwork : MonoBehaviour
+public class AICar : MonoBehaviour
 {
-    private Layer[] layers;
+    // Start is called before the first frame update
     void Start()
     {
-        layers = new Layer[2];
+        
     }
 
     // Update is called once per frame
-    public static void Upddate()
+    void Update()
     {
         
     }
