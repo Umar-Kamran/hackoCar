@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    private float speed;
+    public float speed;
     private float deltaSpeed;
     public float speedMultiplier;
+    public float maxSpeed;
     private Rigidbody2D rb;
 
     private Transform tranfs;
@@ -23,6 +24,7 @@ public class Car : MonoBehaviour
     private void FixedUpdate()
     {
         speed += deltaSpeed;
+        speed = Mathf.Clamp(speed, 0, maxSpeed);
         rb.transform.Translate(new Vector3(speed * speedMultiplier, 0, 0));
         deltaSpeed = 0;
 

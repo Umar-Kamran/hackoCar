@@ -14,21 +14,21 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            car.turn(-1);
-        }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.A))
         {
             car.turn(1);
         }
+        if (Input.GetKey(KeyCode.D))
+        {
+            car.turn(-1);
+        }
 
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             car.accelerate(1);
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             car.accelerate(-1);
         }
