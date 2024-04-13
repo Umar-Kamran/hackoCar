@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
         {
             car.accelerate(1);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.Space))
         {
             car.accelerate(-1);
         }

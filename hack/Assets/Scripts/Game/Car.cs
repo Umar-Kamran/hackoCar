@@ -8,6 +8,7 @@ public class Car : MonoBehaviour
     private float deltaSpeed;
     public float speedMultiplier;
     public float maxSpeed;
+    public float accelMultiplier;
     private Rigidbody2D rb;
 
     private Transform tranfs;
@@ -23,13 +24,14 @@ public class Car : MonoBehaviour
 
     private void FixedUpdate()
     {
-        speed += deltaSpeed;
+        speed += deltaSpeed * accelMultiplier;
         speed = Mathf.Clamp(speed, 0, maxSpeed);
         rb.transform.Translate(new Vector3(speed * speedMultiplier, 0, 0));
-        deltaSpeed = 0;
 
-        tranfs.Rotate(new Vector3(0, 0, turnAngleDelta * turnMultiplier));
+
+        tranfs.Rotate(new Vector3(0, 0, turnAngleDelta * turnMultiplier * (1/(speed+1))));
         turnAngleDelta = 0;
+        deltaSpeed = -0.4f * accelMultiplier;
     }
 
     public void accelerate(float deltaSpeed)
