@@ -14,10 +14,12 @@ public class Car : MonoBehaviour
     private Transform tranfs;
     private float turnAngleDelta;
     public float turnMultiplier;
+    private CarDistances cardist;
 
     // Start is called before the first frame update
     void Start()
     {
+        cardist = GetComponent<CarDistances>();
         tranfs = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -44,4 +46,11 @@ public class Car : MonoBehaviour
         turnAngleDelta = rotation; 
     }
 
+    public float getSpeed() { return speed; }
+    
+    public double[] getDists()
+    {
+        
+        return cardist.distances();
+    }
 }

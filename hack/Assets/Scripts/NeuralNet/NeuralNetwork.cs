@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class NeuralNetwork : MonoBehaviour
 {
-    public class NeuralNetwork : MonoBehaviour
-    {
         private List<Layer> layers = new List<Layer>();
 
         public NeuralNetwork(params int[] neuronCounts)
@@ -45,4 +43,3 @@ public class NeuralNetwork : MonoBehaviour
             }
         }
     }
-}
