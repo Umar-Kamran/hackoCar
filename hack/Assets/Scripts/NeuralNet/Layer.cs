@@ -5,10 +5,6 @@ using UnityEngine;
 public class Layer : MonoBehaviour
 {
        
-    private int inpNum;
-    private int outNum;
-    private double[,] weights;
-    private double[,] biases;
     /*
     public Layer(int inpNum, int outNum)
     {
@@ -47,8 +43,6 @@ public class Layer : MonoBehaviour
     }
     */
 
-    public class Layer
-    {
         private int inpNum;
         private int outNum;
         private double[,] weights;
@@ -86,7 +80,7 @@ public class Layer : MonoBehaviour
             {
                 for (int j = 0; j < outNum; j++)
                 {
-                    weights[i, j] = rnd.NextDouble() * 2 - 1;
+                    weights[i, j] = rnd.NextDouble() * 2- 1;
                 }
             }
             for (int i = 0; i < outNum; i++)
@@ -94,5 +88,4 @@ public class Layer : MonoBehaviour
                 biases[i] = rnd.NextDouble() * 2 - 1;
             }
         }
-    }
 }
