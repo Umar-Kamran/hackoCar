@@ -31,7 +31,7 @@ public class Car : MonoBehaviour
 
         tranfs.Rotate(new Vector3(0, 0, turnAngleDelta * turnMultiplier * (1/(speed+1))));
         turnAngleDelta = 0;
-        deltaSpeed = -0.4f * accelMultiplier;
+        deltaSpeed = -0.15f * accelMultiplier;
     }
 
     public void accelerate(float deltaSpeed)
