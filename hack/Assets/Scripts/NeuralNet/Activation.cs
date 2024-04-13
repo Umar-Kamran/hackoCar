@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Activation : MonoBehaviour
+public static class Activation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static double Activate(double input)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return System.Math.Tanh(input);
     }
 }
